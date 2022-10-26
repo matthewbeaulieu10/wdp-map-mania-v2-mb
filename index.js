@@ -17,10 +17,10 @@ var favPlaces = {
 		{"name":"home","location":"south elgin, illinois","lat":"41.970760","lng":"-88.351590"},
 		{"name":"carlsons","location":"lakeville, minnesota","lat":"44.603970","lng":"-93.325600"},
 		{"name":"carp","location":"carpinteria, california","lat":"34.398918","lng":"-119.518356"},
-		{"name":"chelsea","location":"london, uk","lat":"51.487469","lng":"-0.168680"},
+		{"name":"dreamz","location":"andorra","lat":"42.546245","lng":"1.601554"},
 		{"name":"happy ice","location":"manaus, brazil", "lat":"-3.106390", "lng":"-60.026290"},
 		{"name":"grandpas cabin","location":"friendship, wisconsin","lat":"44.053880","lng":"-89.787610"},
-		{"name":"carl is bad","location":"carlsbad, california","lat":"33.166039","lng":"-117.337929"},
+		{"name":"hacksaw ridge","location":"okinawa, japan","lat":"26.33583","lng":"127.80139"},
 		{"name":"beautiful place","location":"beaulieu del mar, france","lat":"43.729019","lng":"4.021010"},
 		{"name":"ot","location":"jerusalem, israel","lat":"31.76904","lng":"35.21633"},
 		{"name":"arturze home","location":"riga, latvia","lat":"56.946285","lng":"24.105078"}

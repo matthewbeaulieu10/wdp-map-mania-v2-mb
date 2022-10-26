@@ -1,0 +1,13 @@
+ON APP LOAD 
+----------------------
+1 - load map
+2 - load and save markers to universal variable
+3 - create idle listener
+
+ON IDLE 
+----------------------
+1 - get zoom
+2 - go through each 'marker' and check to see if the coordinates are on screen
+    2a - if they are but out of zoom, add to inWindow counter
+    2b - if they are and in zoom, create marker, delete from listene
+    2c - if not, do nothing
