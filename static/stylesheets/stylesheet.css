@@ -1,0 +1,14 @@
+body {
+    background-color:skyblue;
+    color:lightgreen;
+}
+
+#mapDiv {
+    height:100%
+}
+
+html, body {
+    height:100%;
+    padding:0;
+    margin:0;
+}
