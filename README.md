@@ -2,4 +2,4 @@
 
 Matthew Beaulieu -- WDP Map Mania - matthewtbeaulieu@lewisu.edu
 
-go to -- URL NOT CREATED YET -- to run it
+go to -- https://wdp-map-mania-v2-mb.azurewebsites.net -- to run it
