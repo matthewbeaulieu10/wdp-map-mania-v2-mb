@@ -52,8 +52,6 @@ function initMap() {
 
     getMarkers()
 
-    homeMarker = new google.maps.Marker({position:{lat:41.970760,lng:-88.351590},map:actualMap});
-
     google.maps.event.addListener(actualMap, 'idle', function() {
 
         idleReset()
@@ -67,18 +65,27 @@ function initMap() {
 function idleReset() {
     var zoom = actualMap.getZoom()
     var inWindow = 0;
+    var j = 1;
+    var foundMarkers = [];
 
     for (let i = 0; i < markers.length; i++) {
         var lat = Number(markers[i].lat)
         var lng = Number(markers[i].lng)
+        var title = markers[i].location
+        var name = markers[i].name 
     
         if (actualMap.getBounds().contains({lat:lat,lng:lng})) {
             inWindow++;
+            if (zoom > 9) {
+                markers.splice(i, 1)
+                foundMarkers[j] = new google.maps.Marker({position:{lat:lat,lng:lng},map:actualMap,title:title})
+                alert(name)
+            }
         }
     }
 
     document.getElementById("inGameStats").innerHTML = `
     spots in window: ${inWindow},
     zoom level: ${zoom},
-    locations found: 0`;
+    locations left to find: ${markers.length}`;
 }
