@@ -67,6 +67,8 @@ function idleReset() {
     var inWindow = 0;
     var j = 1;
     var foundMarkers = [];
+    var random = Math.floor(Math.random() * markers.length)
+    var hint = markers[random].hint;
 
     for (let i = 0; i < markers.length; i++) {
         var lat = Number(markers[i].lat)
@@ -80,6 +82,9 @@ function idleReset() {
                 markers.splice(i, 1)
                 foundMarkers[j] = new google.maps.Marker({position:{lat:lat,lng:lng},map:actualMap,title:title})
                 alert(name)
+                if (markers.length == 0) {
+                    winGame()
+                }
             }
         }
     }
@@ -87,5 +92,10 @@ function idleReset() {
     document.getElementById("inGameStats").innerHTML = `
     spots in window: ${inWindow},
     zoom level: ${zoom},
-    locations left to find: ${markers.length}`;
+    locations left to find: ${markers.length},
+    hint: ${hint}`;
+}
+
+function winGame() {
+    alert("you won!")
 }

@@ -14,16 +14,16 @@ app.use(express.static(__dirname + '/static'))
 
 var favPlaces = {
 	"places": [
-		{"name":"home","location":"south elgin, illinois","lat":"41.970760","lng":"-88.351590"},
-		{"name":"carlsons","location":"lakeville, minnesota","lat":"44.603970","lng":"-93.325600"},
-		{"name":"carp","location":"carpinteria, california","lat":"34.398918","lng":"-119.518356"},
-		{"name":"dreamz","location":"andorra","lat":"42.546245","lng":"1.601554"},
-		{"name":"happy ice","location":"manaus, brazil", "lat":"-3.106390", "lng":"-60.026290"},
-		{"name":"grandpas cabin","location":"friendship, wisconsin","lat":"44.053880","lng":"-89.787610"},
-		{"name":"hacksaw ridge","location":"okinawa, japan","lat":"26.33583","lng":"127.80139"},
-		{"name":"beautiful place","location":"beaulieu del mar, france","lat":"43.729019","lng":"4.021010"},
-		{"name":"ot","location":"jerusalem, israel","lat":"31.76904","lng":"35.21633"},
-		{"name":"arturze home","location":"riga, latvia","lat":"56.946285","lng":"24.105078"}
+		{"name":"home","location":"south elgin, illinois","lat":"41.970760","lng":"-88.351590","hint":"an hour out of the windy city"},
+		{"name":"carlsons","location":"lakeville, minnesota","lat":"44.603970","lng":"-93.325600","hint":"an hour out of the twins"},
+		{"name":"carp","location":"carpinteria, california","lat":"34.398918","lng":"-119.518356","hint":"west coast, on the coast"},
+		{"name":"dreamz","location":"andorra","lat":"42.546245","lng":"1.601554","hint":"a country that's not a country, bordered by una país and un autre pays, where those languages both originated."},
+		{"name":"happy ice","location":"manaus, brazil", "lat":"-3.106390", "lng":"-60.026290","hint":"a city in the amazon"},
+		{"name":"grandpas cabin","location":"friendship, wisconsin","lat":"44.053880","lng":"-89.787610","hint":"in the middle of the land of cheese"},
+		{"name":"hacksaw ridge","location":"okinawa, japan","lat":"26.33583","lng":"127.80139","hint":"eastern edge of the world, the location of a 2016 film starring an actor who has also played spiderman"},
+		{"name":"beautiful place","location":"beaulieu del mar, france","lat":"43.729019","lng":"4.021010","hint":"my last name"},
+		{"name":"ot","location":"jerusalem, israel","lat":"31.76904","lng":"35.21633","hint":"where jesus did the really important stuff"},
+		{"name":"arturze home","location":"riga, latvia","lat":"56.946285","lng":"24.105078", "hint":"#3 on Lewis Men's soccer"}
 	]
 }
 
