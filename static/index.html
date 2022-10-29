@@ -1,20 +1,27 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Map Mania MB</title>
-        <link rel="stylesheet" href="stylesheets/stylesheet.css">
-        <script src="scripts/script.js"></script>
-    </head>
-    <body>
-        <div id="aboveMapDiv">
-            <span><p id="inGameStats"></p></span>
-            <span><button id="cheatCode" onclick="cheat()">Cheat!</button></span>
-        </div>
-        <div id="mapDiv">
-            <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtmhj59HOFHzfD94IsstGI_nCogqPF9IE&callback=initMap&v=weekly"
-            defer
-            ></script>
-        </div>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Mania MB</title>
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="stylesheets/indexStylesheet.css">
+
+</head>
+<body>
+    <h1>
+        Welcome to Matthew Beaulieu's implementation of Map Mania
+    </h1>
+    <p>
+        I'm glad you decided to join me! Here's the gist of the game: 
+        you have to find each of my ten favorite locations. How you do that
+        is zooming in close enough (zoom level 10) to each of the spots
+        that I have selected. The spot must be visible within the window
+        within zoom level 10 for you to receive credit. Once there are zero
+        spots left to win, the game is over! If you want to be really lame, 
+        I've posted a cheat button on the next page for you to go and take 
+        the easy way out, although I strongly discourage it.
+    </p>
+    <button onclick="playGame()">Let's play!</button>
+</body>
 </html>

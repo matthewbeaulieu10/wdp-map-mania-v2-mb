@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Map Mania MB</title>
+        <link rel="stylesheet" href="stylesheets/gameStylesheet.css">
+        <script src="scripts/script.js"></script>
+    </head>
+    <body>
+        <div id="aboveMapDiv">
+            <span><p id="inGameStats"></p></span>
+            <span id="buttonBar"><button id="cheatCode" onclick="cheat()">Cheat!</button><button id="backToInstructions" onclick="backToInstructions()">Instructions!</button></span>
+        </div>
+        <div id="mapDiv">
+            <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtmhj59HOFHzfD94IsstGI_nCogqPF9IE&callback=initMap&v=weekly"
+            defer
+            ></script>
+        </div>
+    </body>
+</html>

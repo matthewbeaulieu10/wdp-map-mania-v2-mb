@@ -1,0 +1,12 @@
+body {
+    color:white;
+    background-color: navy;
+    text-align: center;
+}
+
+button {
+    color:navy;
+    background-color: white;
+    border-radius:12px;
+    border-color:transparent;
+}

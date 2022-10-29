@@ -1,14 +1,20 @@
+//early dev testing
 function letMeKnowImWorking () {
     console.log("working!")
 }
 
-//DON'T THINK I NEED 
-//------------------------
-// function begin() {
-//     getMarkers()
-// }
-//-------------------------
+//function called when button is pressed on hompage
+//directs user to game page
+async function playGame() {
+    location.href=location.href + 'game'
+}
 
+//button on game page to take user back to instructions
+async function backToInstructions() {
+    location.href=location.href.slice(0,-5)
+}
+
+//retrieves the list of markers from the node.js server
 async function getMarkers() {
     try{
         const response = await fetch("/places")
@@ -20,15 +26,19 @@ async function getMarkers() {
     
 }
 
+//declared list of markers so that it can be used in multiple scopes
 var markers; 
 
+//saves the markers to a JSON object
 function saveMarkers(data) {
     markers = Object.values(data.places)
     console.log(markers)
 }
 
-//NEED THIS FOR CHEAT CODE (prolly)
+//takes all of the unfound markers and exposes them, takes you to winGame()
 function cheat(data) {
+    var remainingMarkers = []
+    var remainingInfoWindows = []
     for (let i = 0; i < markers.length; i++) {
         var location = markers[i].location
         var lat = Number(markers[i].lat)
@@ -39,11 +49,11 @@ function cheat(data) {
     winGame()
 }
 
+//map variable declared in global scope
 var actualMap;
-var homeMarker;
 
 
-//creates map, gets and saves markers, right now creates homemarker, adds idle listener
+//creates map, adds idle listener
 function initMap() {
     actualMap = new google.maps.Map(document.getElementById("mapDiv"), {
         center: {lat:0,lng:0},
@@ -62,6 +72,10 @@ function initMap() {
     
 }
 
+//everytime the map is idle this function checks to see how
+//many spots are in bounds, finds the zoom level, and sees if 
+//the user is close enough to find a spot. if so, it makes the marker
+//and alerts the user of all these things.
 function idleReset() {
     var zoom = actualMap.getZoom()
     var inWindow = 0;
@@ -81,7 +95,7 @@ function idleReset() {
             if (zoom > 9) {
                 markers.splice(i, 1)
                 foundMarkers[j] = new google.maps.Marker({position:{lat:lat,lng:lng},map:actualMap,title:title})
-                alert(name)
+                alert("you found: " + name)
                 if (markers.length == 0) {
                     winGame()
                 }
@@ -96,6 +110,15 @@ function idleReset() {
     hint: ${hint}`;
 }
 
+//adds the button to take you to the prize page
 function winGame() {
     alert("you won!")
+    document.getElementById("buttonBar").innerHTML= "<button onClick='collectPrize()'>Collect Your Prize!</button>"
+}
+
+//redirects to the prize page
+async function collectPrize() {
+    cutTheCrap = location.href=location.href.slice(0,-5);
+    urlIWantThisCrapToGoTo = cutTheCrap + "/prize"
+    location.href = urlIWantThisCrapToGoTo
 }

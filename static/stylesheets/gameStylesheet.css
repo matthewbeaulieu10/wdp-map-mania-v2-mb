@@ -13,10 +13,11 @@ html, body {
     margin:0;
 }
 
-#cheatCode {
+button {
     background-color:white;
     color:navy;
     border-radius:12px;
     border-color:transparent;
     margin-bottom:10px;
+    margin-right:10px;
 }
