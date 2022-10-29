@@ -28,15 +28,15 @@ function saveMarkers(data) {
 }
 
 //NEED THIS FOR CHEAT CODE (prolly)
-function makeMarkers(data) {
-    var places = Object.values(data.places)
-    for (let i = 0; i < places.length; i++) {
-        var location = places[i].location
-        var lat = Number(places[i].lat)
-        var lng = Number(places[i].lng)
-        var name = places[i].name
+function cheat(data) {
+    for (let i = 0; i < markers.length; i++) {
+        var location = markers[i].location
+        var lat = Number(markers[i].lat)
+        var lng = Number(markers[i].lng)
+        var name = markers[i].name
         new google.maps.Marker({position: {lat:lat,lng:lng}, map:actualMap, title: location})
     } 
+    winGame()
 }
 
 var actualMap;
